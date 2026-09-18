@@ -1,0 +1,7 @@
+{
+  "header_tokens": ["Casey", "Example", "casey@example.com", "Portfolio"],
+  "max_skills_lines": 6,
+  "min_fill_ratio": 0.70,
+  "adjacent_terms": [],
+  "forbidden_terms": []
+}

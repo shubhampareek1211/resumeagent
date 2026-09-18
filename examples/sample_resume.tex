@@ -1,0 +1,51 @@
+% Fictional fixture for setup and regression tests. Replace every claim before applying.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\pagestyle{empty}
+\raggedright
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\setlist[itemize]{itemsep=2pt, leftmargin=11pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+\begin{document}
+\begin{center}
+{\LARGE Casey Example}\\
+\href{mailto:casey@example.com}{casey@example.com} \textbar{} Portfolio
+\end{center}
+\section{Education}
+\textbf{Example University} \hfill Example City\\
+\textit{Bachelor of Science in Computer Science} \hfill 2025
+\section{Experience}
+\textbf{Software Developer, Example Company} \hfill \textit{Jan 2025 -- Present}
+\begin{itemize}
+\item Built a Python service to validate incoming records before loading them into PostgreSQL.
+\item Added SQL checks that detect missing keys and duplicate records in daily imports.
+\item Documented the deployment process and maintained regression tests for the service.
+\end{itemize}
+\textbf{Engineering Intern, Sample Organization} \hfill \textit{Jun 2024 -- Dec 2024}
+\begin{itemize}
+\item Created a dashboard to help a support team inspect data quality and investigate failed imports.
+\item Implemented API request validation and wrote tests for malformed input.
+\end{itemize}
+\section{Projects}
+\textbf{Sample Data Monitor}
+\begin{itemize}
+\item Developed a Python command-line tool to summarize schema changes in synthetic datasets.
+\end{itemize}
+\textbf{Example Search Service}
+\begin{itemize}
+\item Built a PostgreSQL search endpoint with pagination and automated API tests.
+\end{itemize}
+\vfill
+\section{Technical Skills}
+\textbf{Languages:} Python, SQL\\
+\textbf{Tools:} Git, Docker, PostgreSQL\\
+\textbf{Practices:} API validation, regression tests, data quality\\
+\textbf{Certifications:} Example training certificate (fictional)
+\end{document}

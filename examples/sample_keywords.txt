@@ -1,0 +1,6 @@
+Python
+SQL
+PostgreSQL
+API
+regression tests
+~Docker

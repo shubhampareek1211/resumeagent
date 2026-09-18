@@ -1,0 +1,37 @@
+# Private inputs, outputs, identity and application history: never publish.
+.env
+.env.*
+!.env.example
+profile.local.json
+applications.md
+truth_ledger.md
+bullet_bank.md
+cv.md
+references/
+inputs/
+folder/outputs/
+.state/
+.claude/
+.codex/
+*.pdf
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.Rhistory
+# Environments and generated packages
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.coverage
+htmlcov/
+.ruff_cache/
+dist/
+.DS_Store

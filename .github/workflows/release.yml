@@ -1,0 +1,26 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  verify:
+    uses: ./.github/workflows/ci.yml
+  publish:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Package approved source only
+        run: python3 scripts/package_release.py
+      - name: Publish release with checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: gh release create "$RELEASE_TAG" dist/* --verify-tag --generate-notes
